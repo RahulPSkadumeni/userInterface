@@ -12,7 +12,7 @@ const MainContainer = () => {
   return (
     <div className="flex  ">
       <Menu />
-      <div className="ml-10 mt-5 w-full  ">
+      {/* <div className="ml-10 mt-5 w-full  ">
         <div className="flex justify-between">
           <h1 className="text-lg text-left font-semibold  ml-10">
             Choose a plan that's just right for you!
@@ -48,7 +48,7 @@ const MainContainer = () => {
             for each features
           </h1>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
