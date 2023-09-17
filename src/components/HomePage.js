@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className="">
       <Header />
-      <MainContainer />
+      {/* <MainContainer /> */}
     </div>
   );
 };

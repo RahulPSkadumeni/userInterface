@@ -11,26 +11,26 @@ const Header = () => {
     setModalOpen(!modalOpen);
   };
   return (
-    <header className="bg-blue-200 p-5 flex justify-between items-center">
-      <div className="flex items-center w-44  ">
-        <img src={logo} alt="Company Logo" className=" h-14  " />
+    <header className="w-full bg-blue-200  flex justify-between items-center">
+      <div className="flex  w-1/2 sm:w-2/12  bg-white ">
+        <img src={logo} alt="Company Logo" className=" w-14  " />
       </div>
-      <div className="hidden lg:flex  ">
-        <div className=" flex m-1 p-1  bg-white items-center rounded-lg">
+      <div className="flex">
+        <div className="  flex  w-56 pl-2  bg-white items-center rounded-lg">
           <img
             src={logo2}
             alt="Company Logo"
             className="w-6 h-6 bg-blue-300 rounded-full"
           />
           <button
-            className=" flex  text-blue-500 px-3 py-2 "
+            className=" flex   text-blue-500 px-3 py-2 "
             onClick={toggleModal}
           >
             Show Company Name
           </button>
         </div>
         <button
-          className=" m-1 p-1  bg-white items-center rounded-lg"
+          className=" mx-1 p-1  bg-white items-center rounded-lg"
           onClick={toggleModal}
         >
           <div className="mx-2 text-lg">V</div>
