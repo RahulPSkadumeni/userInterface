@@ -21,20 +21,21 @@ const Header = () => {
   return (
     <header className="w-full bg-blue-200 flex  justify-between items-center  ">
       <div className="flex   w-1/4 sm:w-56     relative bg-white items-center justify-center shadow-2xl">
-        <img src={logo} alt="Company Logo" className="  h-16 p-2  " />
+        <img
+          src={logo}
+          alt="Company Logo"
+          className="  h-16 p-2   transition-transform hover:scale-125 "
+        />
       </div>
 
       <div className="flex">
-        <div className="  flex  w-56 pl-2  bg-white items-center rounded-lg">
+        <div className="  flex  w-56 pl-3  bg-white items-center rounded-lg hover:bg-emerald-400  ">
           <img
             src={logo2}
             alt="Company Logo"
-            className="w-6 h-6 bg-blue-300 rounded-full"
+            className="w-6 h-6 bg-blue-300 rounded-full transition-transform hover:scale-105"
           />
-          <button
-            className=" flex   text-blue-500 px-3 py-2 "
-            onClick={toggleModal}
-          >
+          <button className=" flex   text-blue-500 hover:text-white px-3 py-2  ">
             Show Company Name
           </button>
         </div>

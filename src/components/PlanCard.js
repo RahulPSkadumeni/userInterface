@@ -4,8 +4,8 @@ import React from "react";
 const PlanCard = ({ plan }) => {
   console.log("whbhedhfda", plan);
   return (
-    <div className="shadow-xl flex-auto  md:w-48 p-3 m-5 sm:mr-2 py-5 text-start rounded-2xl">
-      <h1 className="font-semibold text-3xl">{plan.name}</h1>
+    <div className="shadow-xl flex-auto  md:w-48 p-3 m-5 sm:mr-2 py-5 text-start rounded-2xl transform transition-transform hover:scale-105 hover:bg-sky-200">
+      <h1 className="font-semibold text-2xl">{plan.name}</h1>
       <p className="line-through">{plan.price}</p>
       <h1>{plan.offerPrice}</h1>
       <button className={`flex px-4 p-1 rounded-lg bg-${plan.button_color}`}>
@@ -26,7 +26,7 @@ const PlanCard = ({ plan }) => {
         </li>
       </ul>
       <div></div>
-      <h1 className="underline flex justify-center font-semibold">
+      <h1 className="underline flex justify-center font-semibold cursor-pointer">
         EXPLORE FEATURES <Play className="ml-1 text-yellow-500" />
       </h1>
     </div>

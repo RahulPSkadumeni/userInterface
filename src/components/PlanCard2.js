@@ -10,9 +10,9 @@ import React from "react";
 
 const PlanCard2 = ({ plan }) => {
   return (
-    <div className="  w-full  mt-5 p-2  mr-4 sm:flex  flex-col sm:flex-row shadow-2xl  text-start   rounded-2xl ">
+    <div className="  w-full p-10 m-10 sm:m-0   mt-5 sm:p-2  sm:mr-4 sm:flex  flex-col sm:flex-row shadow-2xl  text-start   rounded-2xl transform transition-transform hover:scale-105 hover:bg-sky-200 ">
       <div className=" p-3 ">
-        <h1 className="font-semi-bold text-3xl">{plan.name}</h1>
+        <h1 className="font-semi-bold text-2xl">{plan.name}</h1>
         <p className="line-through">{plan.price}</p>
         <h1>{plan.offerPrice}</h1>
         <button
@@ -45,7 +45,7 @@ const PlanCard2 = ({ plan }) => {
           </li>
         </ul>
         <div></div>
-        <h1 className="underline flex justify-center font-semibold">
+        <h1 className="underline flex justify-center font-semibold cursor-pointer">
           EXPLORE FEATURES <Play className="ml-1 text-yellow-500" />
         </h1>
       </div>

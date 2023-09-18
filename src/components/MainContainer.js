@@ -14,7 +14,7 @@ const MainContainer = () => {
     <div className="flex flex-col w-screen">
       <div className="flex w-full">
         <Menu />
-        <div className="ml-5 sm:ml-16 sm:mr-16 mt-5 w-full">
+        <div className="ml-5 sm:ml-16 sm:mr-16 mt-4 w-full">
           <div className="flex justify-between">
             <h1 className="text-sm md:text-lg text-left font-semibold">
               Choose a plan that's just right for you!

@@ -41,7 +41,7 @@ export const plans = [
     name: "Premium",
     price: "$389.99/mo",
     offerPrice: "$199.99/mo",
-    button_color: "purple-400",
+    button_color: "orange-200",
     benefits: [
       {
         users: "Upto 25 users ",
