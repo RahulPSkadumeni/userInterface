@@ -2,7 +2,15 @@ import React, { useState } from "react";
 
 import { faAngleDown } from "react-icons/fa6";
 import { logo, logo2 } from "../Constants/constants";
-import { Power } from "lucide-react";
+import {
+  HelpCircle,
+  LayoutDashboard,
+  MessagesSquare,
+  Power,
+  Puzzle,
+  Sprout,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -11,10 +19,11 @@ const Header = () => {
     setModalOpen(!modalOpen);
   };
   return (
-    <header className="w-full bg-blue-200  flex justify-between items-center">
-      <div className="flex  w-1/2 sm:w-2/12  bg-white ">
-        <img src={logo} alt="Company Logo" className=" w-14  " />
+    <header className="w-full bg-blue-200 flex  justify-between items-center  ">
+      <div className="flex   w-1/4 sm:w-56     relative bg-white items-center justify-center shadow-2xl">
+        <img src={logo} alt="Company Logo" className="  h-16 p-2  " />
       </div>
+
       <div className="flex">
         <div className="  flex  w-56 pl-2  bg-white items-center rounded-lg">
           <img
@@ -29,25 +38,53 @@ const Header = () => {
             Show Company Name
           </button>
         </div>
+        <button className=" mx-1 p-1  bg-white items-center rounded-lg">
+          <div className="mx-2 text-lg">V</div>
+        </button>
         <button
-          className=" mx-1 p-1  bg-white items-center rounded-lg"
+          className="mx-1 p-1 bg-white items-center rounded-lg inline-block md:hidden "
           onClick={toggleModal}
         >
-          <div className="mx-2 text-lg">V</div>
+          <div className="mx-2 text-lg">=</div>
         </button>
       </div>
       {modalOpen && (
-        <div className="absolute   top-[10%] right-10 w-50 items-center justify-center rounded-lg bg-black bg-opacity-40 z-50">
-          <div className=" bg-gray-200 flex-col p-4 rounded shadow-lg">
-            <div>
-              <div className=" flex m-1 p-1  bg-white items-center rounded-lg">
-                <div className=" flex m-2 " onClick={toggleModal}>
-                  <Power className="mr-2  text-blue-500" /> Logout
+        <div className="absolute   top-[10%] right-10 w-50 items-center justify-center rounded-lg bg-sky-300 bg-opacity-80 z-50">
+          <div className=" bg-gray-200 flex-col m-2 p-4 rounded shadow-lg">
+            <div className="ml-2">
+              <Link to="/">
+                <div className="flex space-x-2  bg-sky-300 hover:bg-white cursor-pointer rounded-lg mr-5 mt-5 p-1 items-center shadow-lg">
+                  <LayoutDashboard className=" text-blue-500" />
+                  <h1 className="my-1 font-semibold">Dash Board</h1>
                 </div>
+              </Link>
+              <div className="flex space-x-2  hover:bg-sky-300 cursor-pointer rounded-lg mr-5 mt-5 p-1 items-center shadow-sm">
+                <Sprout className=" text-blue-500 " />
+                <h1 className="my-1 font-semibold">Perks</h1>
               </div>
-            </div>
-            <div className="m-1 p-1  bg-white rounded-lg" onClick={toggleModal}>
-              X
+              <div className="flex space-x-2  hover:bg-sky-300 cursor-pointer rounded-lg mr-5 mt-5 p-1 items-center shadow-sm">
+                <Puzzle className=" text-blue-500" />
+                <h1 className="my-1 font-semibold">Addons</h1>
+              </div>
+              <div className="flex space-x-2  hover:bg-sky-300 cursor-pointer rounded-lg mr-5 mt-5 p-1 items-center shadow-sm">
+                <HelpCircle className=" text-blue-500" />
+                <h1 className="my-1 font-semibold">FAQ</h1>
+              </div>
+              <div className="flex space-x-2  hover:bg-sky-300 cursor-pointer rounded-lg mr-5 mt-5 p-1 items-center shadow-sm">
+                <MessagesSquare className=" text-blue-500" />
+                <h1 className="my-1 font-semibold">Support</h1>
+              </div>
+              <div className="flex space-x-2  hover:bg-sky-300 cursor-pointer rounded-lg mr-5 mt-5 p-1 items-center shadow-sm">
+                <Power className=" text-blue-500  " />
+                <h1 className="my-1 font-semibold"> Logout</h1>
+              </div>
+              <div
+                onClick={toggleModal}
+                className="flex space-x-2  hover:bg-sky-300 cursor-pointer rounded-lg mr-5 mt-5 p-1 items-center shadow-sm"
+              >
+                <div className="text-blue-500">X</div>
+                <h1 className="my-1 pl-3  font-semibold">Close</h1>
+              </div>
             </div>
           </div>
         </div>

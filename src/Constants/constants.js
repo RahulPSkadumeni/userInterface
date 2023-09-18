@@ -1,5 +1,4 @@
-export const logo =
-  "https://st2.depositphotos.com/3867453/7277/v/450/depositphotos_72775263-stock-illustration-letter-p-logo-icon-design.jpg";
+export const logo = "https://pngimg.com/uploads/letter_p/letter_p_PNG117.png";
 
 export const logo2 =
   "https://png.pngtree.com/element_our/png/20180828/seamless-floral-pattern-background-luxury-style-background-vector-illustration-png_71432.jpg";
@@ -29,7 +28,7 @@ export const plans = [
     name: "Standard",
     price: "$189.99/mo",
     offerPrice: "$99.99/mo",
-    button_color: "red-200",
+    button_color: "pink-300",
     benefits: [
       {
         users: "Upto 25 users ",
@@ -42,7 +41,7 @@ export const plans = [
     name: "Premium",
     price: "$389.99/mo",
     offerPrice: "$199.99/mo",
-    button_color: "purple-200",
+    button_color: "purple-400",
     benefits: [
       {
         users: "Upto 25 users ",
@@ -66,6 +65,7 @@ export const plan2 = [
           "Basics of Documents, Task Flow,Voting Accounting,Banking, Notes, Investor, Director and Team Management included",
       },
     ],
+    button_color: "green-400",
   },
   {
     name: "Enterprise Plan",

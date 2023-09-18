@@ -25,14 +25,15 @@ const Menu = () => {
   const isMenuOpen = useState(true);
   if (!isMenuOpen) return null;
   return (
-    <div className="flex flex-col w-[200px] shadow-2xl  m-1  md:w-2/12 h-screen">
-      <div className="flex-grow ">
+    <div className="w-1/6 p-2 flex-col shadow-2xl h-screen z-50 sm:z-0 hidden md:inline-block">
+      <div className="sm:flex-grow ">
         <ul className=" ">
           <Link to="/">
-            <div className="flex shadow-lg">
+            <div className="flex ">
               <Profile />
             </div>
           </Link>
+          <hr class="border-t border-gray-300 my-4"></hr>
           <Link to="/">
             <div className="flex space-x-2  bg-sky-300 hover:bg-white cursor-pointer rounded-r-lg mr-5 mt-5 p-1 items-center shadow-lg">
               <LayoutDashboard className=" text-blue-500" />

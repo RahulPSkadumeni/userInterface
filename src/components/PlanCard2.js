@@ -1,14 +1,23 @@
-import { Mail, MoveRight, Play, UploadCloud, User2 } from "lucide-react";
+import {
+  Mail,
+  MoveRight,
+  Play,
+  Ticket,
+  UploadCloud,
+  User2,
+} from "lucide-react";
 import React from "react";
 
-const PlanCard2 = () => {
+const PlanCard2 = ({ plan }) => {
   return (
-    <div className=" flex shadow-xl  w-1/2 m-10 py-5 text-start px-5 rounded-2xl ">
-      <div className=" w-1/2 mx-1">
-        <h1 className="font-semi-bold text-3xl">Basic</h1>
-        <p>$899.099/mo</p>
-        <h1>$9.99/mo</h1>
-        <button className="  flex px-4 p-1 rounded-lg bg-orange-200">
+    <div className="  w-full  mt-5 p-2  mr-4 sm:flex  flex-col sm:flex-row shadow-2xl  text-start   rounded-2xl ">
+      <div className=" p-3 ">
+        <h1 className="font-semi-bold text-3xl">{plan.name}</h1>
+        <p className="line-through">{plan.price}</p>
+        <h1>{plan.offerPrice}</h1>
+        <button
+          className={` flex px-4 p-1 rounded-lg  bg-${plan.button_color}`}
+        >
           Get Started <MoveRight className="pl-1 " />
         </button>
       </div>
@@ -16,13 +25,23 @@ const PlanCard2 = () => {
         what you will get:
         <ul>
           <li className="flex my-2 ">
-            <User2 className="mr-2" /> 5GB of storage space
+            <User2 className="mr-2" /> {plan.benefits[0].users}
           </li>
           <li className="flex my-2">
-            <UploadCloud className="mr-2" /> Unlimited users and projects
+            {plan.benefits[0]?.email ? (
+              <>
+                {plan.benefits[0]?.email && <UploadCloud className="mr-2" />}{" "}
+                {plan.benefits[0]?.email}{" "}
+              </>
+            ) : null}
           </li>
           <li className="flex my-2">
-            <Mail className="mr-2" /> Free SSL certificate
+            <Mail className="mr-2" />
+            {plan.benefits[0].support}
+          </li>
+          <li className="flex my-2">
+            <Ticket className="mr-2" />
+            {plan.benefits[0].others}
           </li>
         </ul>
         <div></div>
